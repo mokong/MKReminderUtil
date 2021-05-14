@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ula-AF-cjc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MKReminderUtil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ygs-tP-F9E">
+                                <rect key="frame" x="16" y="169" width="382" height="280"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Te3-64-sCP">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACc-3t-OaO">
+                                                <rect key="frame" x="16" y="25" width="35" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日历的标题-必填" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PkO-Ho-jpS">
+                                                <rect key="frame" x="98" y="16" width="268" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SLD-Vk-YWP"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="PkO-Ho-jpS" firstAttribute="centerY" secondItem="Te3-64-sCP" secondAttribute="centerY" id="BRi-iC-NAH"/>
+                                            <constraint firstAttribute="bottom" secondItem="PkO-Ho-jpS" secondAttribute="bottom" constant="16" id="Ned-d7-MNh"/>
+                                            <constraint firstAttribute="trailing" secondItem="PkO-Ho-jpS" secondAttribute="trailing" constant="16" id="YC6-NG-Z11"/>
+                                            <constraint firstItem="ACc-3t-OaO" firstAttribute="leading" secondItem="Te3-64-sCP" secondAttribute="leading" constant="16" id="u7a-UC-slq"/>
+                                            <constraint firstItem="PkO-Ho-jpS" firstAttribute="top" secondItem="Te3-64-sCP" secondAttribute="top" constant="16" id="yh5-0y-6UT"/>
+                                            <constraint firstItem="ACc-3t-OaO" firstAttribute="centerY" secondItem="Te3-64-sCP" secondAttribute="centerY" id="yqn-CP-N26"/>
+                                            <constraint firstItem="PkO-Ho-jpS" firstAttribute="leading" secondItem="Te3-64-sCP" secondAttribute="leading" constant="98" id="z5i-q3-KDh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55d-Lr-wKw">
+                                        <rect key="frame" x="0.0" y="70" width="382" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxm-gN-RF8">
+                                                <rect key="frame" x="16" y="25" width="35" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="要提醒的地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0h9-lH-p3G">
+                                                <rect key="frame" x="98" y="16" width="268" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7hE-e4-xiF"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="0h9-lH-p3G" firstAttribute="top" secondItem="55d-Lr-wKw" secondAttribute="top" constant="16" id="1vt-Uz-yKY"/>
+                                            <constraint firstItem="0h9-lH-p3G" firstAttribute="leading" secondItem="55d-Lr-wKw" secondAttribute="leading" constant="98" id="9U3-pc-7us"/>
+                                            <constraint firstItem="hxm-gN-RF8" firstAttribute="leading" secondItem="55d-Lr-wKw" secondAttribute="leading" constant="16" id="CqX-b7-cwm"/>
+                                            <constraint firstAttribute="trailing" secondItem="0h9-lH-p3G" secondAttribute="trailing" constant="16" id="DMe-co-hKa"/>
+                                            <constraint firstItem="0h9-lH-p3G" firstAttribute="centerY" secondItem="55d-Lr-wKw" secondAttribute="centerY" id="REW-bA-Fun"/>
+                                            <constraint firstItem="hxm-gN-RF8" firstAttribute="centerY" secondItem="55d-Lr-wKw" secondAttribute="centerY" id="fGt-Cg-3rf"/>
+                                            <constraint firstAttribute="bottom" secondItem="0h9-lH-p3G" secondAttribute="bottom" constant="16" id="lh0-9h-hcM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2IX-KE-wav">
+                                        <rect key="frame" x="0.0" y="140" width="382" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="备注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFe-TW-7Bu">
+                                                <rect key="frame" x="16" y="25" width="35" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日历的备注" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROH-Rg-Xof">
+                                                <rect key="frame" x="98" y="16" width="268" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="esa-Rt-fda"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ROH-Rg-Xof" secondAttribute="trailing" constant="16" id="0yE-da-Fz7"/>
+                                            <constraint firstItem="ROH-Rg-Xof" firstAttribute="top" secondItem="2IX-KE-wav" secondAttribute="top" constant="16" id="HoT-9h-tpq"/>
+                                            <constraint firstAttribute="bottom" secondItem="ROH-Rg-Xof" secondAttribute="bottom" constant="16" id="IHy-0A-vhM"/>
+                                            <constraint firstItem="ROH-Rg-Xof" firstAttribute="leading" secondItem="2IX-KE-wav" secondAttribute="leading" constant="98" id="MSL-GH-e2P"/>
+                                            <constraint firstItem="GFe-TW-7Bu" firstAttribute="centerY" secondItem="2IX-KE-wav" secondAttribute="centerY" id="NoA-Yb-2uy"/>
+                                            <constraint firstItem="GFe-TW-7Bu" firstAttribute="leading" secondItem="2IX-KE-wav" secondAttribute="leading" constant="16" id="Sid-kc-Vm7"/>
+                                            <constraint firstItem="ROH-Rg-Xof" firstAttribute="centerY" secondItem="2IX-KE-wav" secondAttribute="centerY" id="qsN-FV-ydP"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpg-jw-vxw">
+                                        <rect key="frame" x="0.0" y="210" width="382" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJe-4i-19M">
+                                                <rect key="frame" x="16" y="25" width="35" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日历提醒的开始时间-必填" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fbc-Yk-m9K">
+                                                <rect key="frame" x="98" y="16" width="268" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6e-6q-3oG">
+                                                <rect key="frame" x="98" y="16" width="268" height="38"/>
+                                                <connections>
+                                                    <action selector="pickerDateTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="am3-S1-gUI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Fbc-Yk-m9K" secondAttribute="trailing" constant="16" id="2DU-ic-OIW"/>
+                                            <constraint firstItem="kJe-4i-19M" firstAttribute="leading" secondItem="Cpg-jw-vxw" secondAttribute="leading" constant="16" id="2q6-4d-5RE"/>
+                                            <constraint firstItem="Fbc-Yk-m9K" firstAttribute="centerY" secondItem="Cpg-jw-vxw" secondAttribute="centerY" id="E8z-W2-H6R"/>
+                                            <constraint firstItem="Fbc-Yk-m9K" firstAttribute="leading" secondItem="Cpg-jw-vxw" secondAttribute="leading" constant="98" id="HXx-aX-cVk"/>
+                                            <constraint firstItem="w6e-6q-3oG" firstAttribute="trailing" secondItem="Fbc-Yk-m9K" secondAttribute="trailing" id="HlX-LQ-lr6"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fbc-Yk-m9K" secondAttribute="bottom" constant="16" id="NPk-la-2t8"/>
+                                            <constraint firstItem="kJe-4i-19M" firstAttribute="centerY" secondItem="Cpg-jw-vxw" secondAttribute="centerY" id="bdY-ZA-w1K"/>
+                                            <constraint firstItem="w6e-6q-3oG" firstAttribute="bottom" secondItem="Fbc-Yk-m9K" secondAttribute="bottom" id="gtb-8S-J3i"/>
+                                            <constraint firstItem="Fbc-Yk-m9K" firstAttribute="top" secondItem="Cpg-jw-vxw" secondAttribute="top" constant="16" id="k5f-SE-3t8"/>
+                                            <constraint firstItem="w6e-6q-3oG" firstAttribute="top" secondItem="Fbc-Yk-m9K" secondAttribute="top" id="mpd-Nt-b7m"/>
+                                            <constraint firstItem="w6e-6q-3oG" firstAttribute="leading" secondItem="Fbc-Yk-m9K" secondAttribute="leading" id="vMS-M4-Pr5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="XIo-2Y-4dM"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wHY-5W-PgQ">
+                                <rect key="frame" x="16" y="498" width="382" height="78"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6l-g7-hNM">
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="78"/>
+                                        <state key="normal" title="按周一到周五添加"/>
+                                        <connections>
+                                            <action selector="addByMondayToFriday:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8kJ-kp-haj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co9-zX-hWI">
+                                        <rect key="frame" x="191" y="0.0" width="191" height="78"/>
+                                        <state key="normal" title="按国家法定工作日添加"/>
+                                        <connections>
+                                            <action selector="addByNationalWorkRule:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ov8-P5-BQN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="UmY-cG-mWw"/>
+                                </constraints>
+                            </stackView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aX7-52-tyt">
+                                <rect key="frame" x="0.0" y="618" width="414" height="216"/>
+                                <locale key="locale" localeIdentifier="zh-Hans"/>
+                                <connections>
+                                    <action selector="dateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UQe-kQ-7Pb"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aX7-52-tyt" firstAttribute="top" secondItem="wHY-5W-PgQ" secondAttribute="bottom" constant="42" id="0Wj-8t-MH3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wHY-5W-PgQ" secondAttribute="trailing" constant="16" id="0Xf-wx-TT2"/>
+                            <constraint firstItem="wHY-5W-PgQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0kV-m8-rca"/>
+                            <constraint firstItem="Ygs-tP-F9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="81" id="HHZ-PW-ssl"/>
+                            <constraint firstItem="aX7-52-tyt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zxg-ko-gEg"/>
+                            <constraint firstItem="wHY-5W-PgQ" firstAttribute="top" secondItem="Ygs-tP-F9E" secondAttribute="bottom" constant="49" id="jXU-NH-x7Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ygs-tP-F9E" secondAttribute="trailing" constant="16" id="mIm-JU-xAQ"/>
+                            <constraint firstItem="aX7-52-tyt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pHr-37-3IL"/>
+                            <constraint firstItem="Ygs-tP-F9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="t8Z-Zw-lgs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="S5s-TK-SPX"/>
+                    <connections>
+                        <outlet property="addressTF" destination="0h9-lH-p3G" id="uHr-rG-UHO"/>
+                        <outlet property="datePicker" destination="aX7-52-tyt" id="BTd-jd-oyh"/>
+                        <outlet property="noteTF" destination="ROH-Rg-Xof" id="uDA-PZ-us5"/>
+                        <outlet property="timeTF" destination="Fbc-Yk-m9K" id="PtR-ft-8D8"/>
+                        <outlet property="titleTF" destination="PkO-Ho-jpS" id="gv6-0E-bhZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018.840579710145" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9TV-oH-gji">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ula-AF-cjc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aYH-t2-amp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wpd-33-J2o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wec-dy-GZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108.69565217391305" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
